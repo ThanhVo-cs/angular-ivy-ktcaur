@@ -1,0 +1,8 @@
+<hello *ngIf="user.age >= 18; else under18" [name]="user.name"> </hello>
+<ng-template #under18>
+  <div>You are too young to see this content</div>
+</ng-template>
+
+<button (click)="user.age = user.age - 1">-</button>
+<p>Age: {{ user.age }}</p>
+<button (click)="user.age = user.age + 1">+</button>
